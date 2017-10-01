@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -788,46 +788,46 @@
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-8">
-                    <form role="form"  id="contactForm">
+                    <form role="form"  id="contactForm" method="post">
                     <div id="sendmessage">Your booking request has been sent. Thank you!</div>
                     <div id="errormessage"></div>
                     <div class="col-md-6 col-sm-6 contact-form pad-form">
                         <div class="form-group label-floating is-empty">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="your_name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                             <div class="validation"></div>
                         </div>
                         
                     </div>
                     <div class="col-md-6 col-sm-6 contact-form">
                         <div class="form-group">
-                            <input type="date" class="form-control label-floating is-empty" name="date" id="date" placeholder="Date" data-rule="required" data-msg="This field is required" />
+                            <input type="date" class="form-control label-floating is-empty" name="dt" id="date" placeholder="Date" data-rule="required" data-msg="This field is required" />
                             <div class="validation"></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6 contact-form pad-form">
                         <div class="form-group">
-                            <input type="email" class="form-control label-floating is-empty" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <input type="email" class="form-control label-floating is-empty" name="your_email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                             <div class="validation"></div>
                         </div>
                     </div>
                     
                     <div class="col-md-6 col-sm-6 contact-form">
                         <div class="form-group">
-                            <input type="text" class="form-control label-floating is-empty" name="phone" id="phone" placeholder="Phone" data-rule="required" data-msg="This field is required" />
+                            <input type="text" class="form-control label-floating is-empty" name="ph" id="phone" placeholder="Phone" data-rule="required" data-msg="This field is required" />
                             <div class="validation"></div>
                         </div>
                     </div>
                     
                     <div class="col-md-12 contact-form">
                         <div class="form-group label-floating is-empty">
-                            <textarea class="form-control" name="message" rows="5" rows="3" id="message" data-rule="required" data-msg="Please write your order" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="mes" rows="5" rows="3" id="message" data-rule="required" data-msg="Please write your order" placeholder="Message"></textarea>
                             <div class="validation"></div>
                         </div>
                         
                     </div>
                     <div class="col-md-12 btnpad">
                         <div class="contacts-btn-pad">
-                            <button class="contacts-btn">Submit</button>
+                            <button class="contacts-btn" formaction="php/contact_proc.php">submit</button>
                         </div>
                     </div>
                     </form>
@@ -874,7 +874,8 @@
     <script src="js/custom.js"></script>
    
 	<script  type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
+
+<!--<script type="text/javascript" src="js/scripts.js"></script>-->
     
 </body>
 </html>

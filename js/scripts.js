@@ -1,15 +1,15 @@
-$("#contactForm").validator().on("submit", function (event) {
+/*$("#contactForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
     } else {
         // everything looks good!
         event.preventDefault();
-        submitForm();
+       submitForm();
     }
 });
 
 function submitForm(){
-    // Initiate Variables With Form Content
+  Initiate Variables With Form Content
     var name = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
@@ -21,10 +21,11 @@ function submitForm(){
         success : function(text){
             if (text == "success"){
                 formSuccess();
-            }
+           }
         }
     });
 }
 function formSuccess(){
     $( "#msgSubmit" ).removeClass( "hidden" );
-}
+}*/
+
