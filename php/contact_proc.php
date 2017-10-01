@@ -2,7 +2,9 @@
 if(isset($_POST['your_email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "grilltochill204@gmail.com";
+    $email_to = "mail@domain.com";
+    // Important Note => please use your domain email address at $from field other wise the hosting services will ban the script from sending emails as you can spoof email addresses using this script.
+    $from= "yourdomainmail@domain.com";
     $email_subject = "Contact For Delivery";
  
     function died($error) {
@@ -67,18 +69,20 @@ if(isset($_POST['your_email'])) {
  
      
  
-    $email_message .= "First Name: ".clean_string($first_name)."\n";
+    $email_message .= "Name: ".clean_string($first_name)."\n";
     #$email_message .= "Last Name: ".clean_string($last_name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
     $email_message .= "Telephone: ".clean_string($telephone)."\n";
-    $email_message .= "Comments: ".clean_string($comments)."\n";
+    $email_message .= "Message: ".clean_string($comments)."\n";
  
 // create email headers
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
+
+$headers = 'From: '.$from."\r\n".
+'Reply-To: '.$from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers); 
-header("LOCATION: http://grilltochill.co/"); 
+
+header("LOCATION: http://yourdomain.com/"); // change this to your domain.
 ?>
  
 <!-- include your own success html here -->
